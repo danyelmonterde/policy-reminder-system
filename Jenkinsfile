@@ -61,7 +61,8 @@ pipeline {
                 sh 'echo "FRONTEND_PORT=8081" > .env'
                 sh '''aws secretsmanager get-secret-value --secret-id policy-reminder-secrets --region ap-southeast-2 --query SecretString --output text | python3 -c "import json, sys; [print(f'{k}={v}') for k, v in json.loads(sys.stdin.read()).items()]" >> .env'''
                 echo 'Deploying locally using Podman Compose...'
-                sh 'podman compose down || true'
+                sh 'podman compose down -v || true'
+                sh 'podman rm -f mypolicyreminder-mysql mypolicyreminder-springboot mypolicyreminder-angular || true'
                 sh 'podman compose up --build -d'
                 echo 'Local deployment complete.'
             }
