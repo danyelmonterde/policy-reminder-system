@@ -45,6 +45,9 @@ set -e
 cd ~/app
 echo "Stopping existing containers..."
 docker compose down || true
+echo "Pruning unused docker images and build cache to reclaim disk space..."
+docker system prune -a -f --volumes || true
+docker builder prune -a -f || true
 echo "Building and starting containers..."
 docker compose up --build -d
 EOF
