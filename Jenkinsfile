@@ -40,6 +40,9 @@ pipeline {
         }
 
         stage('Frontend Build & Test') {
+            environment {
+                PATH = "/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
+            }
             steps {
                 dir('frontend') {
                     sh 'npm install --legacy-peer-deps'
@@ -50,6 +53,9 @@ pipeline {
         }
 
         stage('Local Podman Deploy') {
+            environment {
+                PATH = "/opt/homebrew/bin:/opt/podman/bin:/usr/local/bin:${env.PATH}"
+            }
             steps {
                 echo 'Fetching secrets from AWS Secrets Manager for local deployment...'
                 sh 'echo "FRONTEND_PORT=8081" > .env'
@@ -62,6 +68,9 @@ pipeline {
         }
 
         stage('Deploy to AWS EC2') {
+            environment {
+                PATH = "/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
+            }
             steps {
                 echo 'Deploying to AWS EC2 instance...'
                 sh "chmod +x deploy-to-ec2.sh"
