@@ -2,18 +2,18 @@
 
 :root {
   /* Colors */
-  --primary-color: #6366f1; /* Indigo */
-  --primary-hover: #4f46e5;
-  --secondary-color: #a855f7; /* Purple */
-  --secondary-hover: #9333ea;
+  --primary-color: #DA291C; /* PruLife UK Red */
+  --primary-hover: #B81D24;
+  --secondary-color: #FF5A5F; /* Coral Red */
+  --secondary-hover: #E0484D;
   
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); /* Deep Navy to Dark Purple */
-  --card-bg-glass: rgba(30, 41, 59, 0.7); /* Translucent slate */
-  --card-border-glass: rgba(255, 255, 255, 0.08);
+  --bg-gradient: linear-gradient(135deg, #0e1118 0%, #1a1e29 100%); /* Elegant Dark Charcoal */
+  --card-bg-glass: rgba(22, 28, 41, 0.75); /* Deep translucent slate */
+  --card-border-glass: rgba(218, 41, 28, 0.15); /* Soft red-bordered glassmorphism */
   
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
   
   /* Status Colors */
   --color-success: #10b981;
@@ -30,7 +30,7 @@
   --font-family-body: 'Plus Jakarta Sans', sans-serif;
   
   /* Shadows & Glassmorphism effects */
-  --box-shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --box-shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
   --backdrop-filter-glass: blur(16px);
   --border-radius: 16px;
   
@@ -63,11 +63,11 @@ body {
   background: rgba(15, 23, 42, 0.5);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(218, 41, 28, 0.3);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.6);
+  background: rgba(218, 41, 28, 0.6);
 }
 
 /* Glassmorphism Container Classes */
@@ -116,7 +116,7 @@ body {
 
 .glass-input:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 0 0 3px rgba(218, 41, 28, 0.25);
   background: rgba(15, 23, 42, 0.8);
 }
 
@@ -144,12 +144,12 @@ body {
 .glass-btn-primary {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 15px rgba(218, 41, 28, 0.35);
 }
 
 .glass-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 6px 20px rgba(218, 41, 28, 0.5);
   filter: brightness(1.1);
 }
 
@@ -266,7 +266,7 @@ body {
   font-family: var(--font-family-title);
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(to right, #ffffff, #c084fc);
+  background: linear-gradient(to right, #ffffff, #ff8a80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8px;

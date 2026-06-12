@@ -10,8 +10,8 @@ import { AuthService } from '../../core/services/auth.service';
   template: `
     <nav class="navbar glass-panel">
       <div class="nav-brand" (click)="goToHome()">
-        <span class="material-icons brand-icon">security</span>
-        <span class="brand-text">PolicyGuard</span>
+        <span class="material-icons brand-icon">verified_user</span>
+        <span class="brand-text">MyPolicyReminder</span>
       </div>
       
       <div class="nav-actions" *ngIf="authService.currentSession$ | async as session">
@@ -57,7 +57,7 @@ import { AuthService } from '../../core/services/auth.service';
       font-family: var(--font-family-title);
       font-size: 22px;
       font-weight: 800;
-      background: linear-gradient(135deg, #ffffff 0%, #a855f7 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #ff8a80 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

@@ -1,6 +1,6 @@
-# Policy Due Date Reminder System
+# MyPolicyReminder
 
-This repository contains a full-stack Policy Due Date Reminder System consisting of a Java Spring Boot backend, an Angular standalone frontend, and a MySQL database configuration. It features secure stateless JWT authentication, role-based dashboards (Admin & Client), dynamic policy upcoming deadline warning notifications, and an automated scheduler engine to trigger reminder logs.
+This repository contains a full-stack MyPolicyReminder system consisting of a Java Spring Boot backend, an Angular standalone frontend, and a MySQL database configuration. It features secure stateless JWT authentication, role-based dashboards (Admin & Client), dynamic policy upcoming deadline warning notifications, and an automated scheduler engine to trigger reminder logs.
 
 ---
 
@@ -28,9 +28,9 @@ The backend expects a local MySQL instance running on port `3306` with the usern
    ```
    *(If port is `0`, make sure you have configured a `my.cnf` file to enable port networking).*
 
-3. Ensure the database `policy_db` exists:
+3. Ensure the database `mypolicy_db` exists:
    ```bash
-   mysql -u root -p"password" -e "CREATE DATABASE IF NOT EXISTS policy_db;"
+   mysql -u root -p"password" -e "CREATE DATABASE IF NOT EXISTS mypolicy_db;"
    ```
 
 ---

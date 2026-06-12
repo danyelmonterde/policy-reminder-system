@@ -21,7 +21,7 @@ pipeline {
 
         stage('Backend Build & Test') {
             environment {
-                SPRING_DATASOURCE_URL = 'jdbc:mysql://localhost:3306/policy_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true'
+                SPRING_DATASOURCE_URL = 'jdbc:mysql://localhost:3306/mypolicy_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true'
                 SPRING_DATASOURCE_USERNAME = 'root'
                 SPRING_DATASOURCE_PASSWORD = credentials('test-db-password')
                 SPRING_MAIL_HOST = 'localhost'

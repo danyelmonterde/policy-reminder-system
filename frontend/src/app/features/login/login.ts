@@ -13,10 +13,10 @@ import { AuthService } from '../../core/services/auth.service';
       <div class="login-card glass-panel animate-fade-in">
         <div class="login-header">
           <div class="brand">
-            <span class="material-icons brand-icon">security</span>
-            <h2>PolicyGuard</h2>
+            <span class="material-icons brand-icon">verified_user</span>
+            <h2>MyPolicyReminder</h2>
           </div>
-          <p class="subtitle">Access your policy renewal reminder dashboard</p>
+          <p class="subtitle">Prudential Life UK Policy Portal</p>
         </div>
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -82,7 +82,7 @@ import { AuthService } from '../../core/services/auth.service';
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #0f172a 100%);
+      background: radial-gradient(circle at 50% 50%, #2a1010 0%, #0e1118 100%);
       padding: 20px;
     }
 
@@ -109,7 +109,7 @@ import { AuthService } from '../../core/services/auth.service';
       font-family: var(--font-family-title);
       font-size: 28px;
       font-weight: 800;
-      background: linear-gradient(135deg, #ffffff 0%, #c084fc 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #ff8a80 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

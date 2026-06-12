@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>policy-reminder</artifactId>
+    <artifactId>my-policy-reminder</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>policy-reminder</name>
+    <name>my-policy-reminder</name>
     <description>Policy Renewal Reminder System Backend</description>
 
     <properties>
