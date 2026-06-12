@@ -70,12 +70,13 @@ public class UserService {
             throw new IllegalArgumentException("Email already exists: " + dto.getEmail());
         }
 
+        // Map manually to avoid Apache Commons BeanUtils enum type mismatch
+        // (BeanUtils cannot assign String -> Role enum via reflection)
         User user = new User();
-        try {
-            org.apache.commons.beanutils.BeanUtils.copyProperties(user, dto);
-        } catch (Exception e) {
-            throw new RuntimeException("Error copying user properties", e);
-        }
+        user.setUsername(dto.getUsername());
+        user.setEmail(dto.getEmail());
+        user.setFullName(dto.getFullName());
+        user.setPhoneNumber(dto.getPhoneNumber());
 
         if (dto.getPassword() != null && !dto.getPassword().isBlank()) {
             user.setPassword(passwordEncoder.encode(dto.getPassword()));
@@ -83,11 +84,7 @@ public class UserService {
             throw new IllegalArgumentException("Password is required for user creation");
         }
 
-        if (dto.getRole() != null) {
-            user.setRole(Role.valueOf(dto.getRole()));
-        } else {
-            user.setRole(Role.ROLE_USER);
-        }
+        user.setRole(dto.getRole() != null ? Role.valueOf(dto.getRole()) : Role.ROLE_USER);
         user.setEnabled(true);
 
         User saved = userRepository.save(user);
